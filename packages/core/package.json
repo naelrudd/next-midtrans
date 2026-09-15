@@ -1,0 +1,49 @@
+{
+  "name": "@next-midtrans/core",
+  "version": "0.1.0",
+  "description": "Typed Midtrans integration for Next.js App Router",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "midtrans",
+    "veritrans",
+    "payment",
+    "nextjs",
+    "app-router",
+    "indonesia",
+    "snap",
+    "webhook"
+  ],
+  "peerDependencies": {
+    "next": ">=14"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "next": "^14.2.15",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}

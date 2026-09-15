@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Build
+dist/
+build/
+
+# Env files (configurable variants are fine to ignore)
+.env
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Misc
+.DS_Store
+*.pem
+README.html
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
