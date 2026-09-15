@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="https://img.shields.io/npm/v/@next-midtrans/core" alt="npm version" />
-  <img src="https://img.shields.io/npm/dt/@next-midtrans/core" alt="npm downloads" />
+  <img src="https://img.shields.io/npm/v/next-midtrans" alt="npm version" />
+  <img src="https://img.shields.io/npm/dt/next-midtrans" alt="npm downloads" />
   <img src="https://img.shields.io/github/stars/naelrudd/next-midtrans" alt="GitHub stars" />
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License" />
 </p>
@@ -26,7 +26,7 @@ This library kills that boilerplate.
 ## 📦 Install
 
 ```bash
-npm install @next-midtrans/core
+npm install next-midtrans
 ```
 
 ## 🔑 Setup
@@ -42,7 +42,7 @@ NEXT_PUBLIC_MIDTRANS_IS_PRODUCTION=false
 ```ts
 "use server";
 
-import { createMidtrans } from "@next-midtrans/core";
+import { createMidtrans } from "next-midtrans";
 
 const midtrans = createMidtrans({
   serverKey: process.env.MIDTRANS_SERVER_KEY!,
@@ -65,7 +65,7 @@ export async function createSnapToken(orderId: string, grossAmount: number) {
 ```tsx
 "use client";
 
-import { useSnap } from "@next-midtrans/core/react";
+import { useSnap } from "next-midtrans/react";
 
 export function Checkout({ orderId }: { orderId: string }) {
   const { pay, snap, loading, error } = useSnap(
@@ -92,7 +92,7 @@ export function Checkout({ orderId }: { orderId: string }) {
 ```ts
 // app/api/midtrans/webhook/route.ts
 import type { NextRequest } from "next/server";
-import { handleWebhook } from "@next-midtrans/core";
+import { handleWebhook } from "next-midtrans";
 
 export async function POST(request: NextRequest) {
   return handleWebhook(
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
 Need it manually? Raw verify is exported too:
 
 ```ts
-import { verifySignature } from "@next-midtrans/core";
+import { verifySignature } from "next-midtrans";
 
 const isValid = verifySignature({
   orderId, statusCode, grossAmount, serverKey,

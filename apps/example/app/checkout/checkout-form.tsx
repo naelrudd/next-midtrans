@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useSnap } from "@next-midtrans/core/react";
-import type { SnapResult } from "@next-midtrans/core/react";
+import { useSnap } from "next-midtrans/react";
+import type { SnapResult } from "next-midtrans/react";
 import { createSnapToken } from "./actions";
 
 export default function Checkout() {

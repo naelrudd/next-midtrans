@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
-import { handleWebhook } from "@next-midtrans/core";
-import type { TransactionNotification } from "@next-midtrans/core";
+import { handleWebhook } from "next-midtrans";
+import type { TransactionNotification } from "next-midtrans";
 
 export async function POST(request: NextRequest) {
   return handleWebhook(

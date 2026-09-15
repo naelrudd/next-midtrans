@@ -1,5 +1,5 @@
 {
-  "name": "@next-midtrans/core",
+  "name": "next-midtrans",
   "version": "0.1.0",
   "description": "Typed Midtrans integration for Next.js App Router",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test && npm run typecheck"
   },
   "keywords": [
     "midtrans",

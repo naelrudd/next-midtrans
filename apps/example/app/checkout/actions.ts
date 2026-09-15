@@ -1,6 +1,6 @@
 "use server";
 
-import { createMidtrans } from "@next-midtrans/core";
+import { createMidtrans } from "next-midtrans";
 
 const serverKey = process.env.MIDTRANS_SERVER_KEY!;
 const isProduction = process.env.MIDTRANS_IS_PRODUCTION === "true";
